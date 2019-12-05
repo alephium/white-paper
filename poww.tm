@@ -4,18 +4,23 @@
 
 <\body>
   <doc-data|<doc-title|Proof of Less Work>|<doc-author|<author-data|<author-name|Cheng
-  Wang>>>>
+  Wang>|<\author-affiliation>
+    Alephium Project
+  </author-affiliation>>>>
 
   <subsubsection|Introduction>
 
   This paper is about PoLW to reduce the energy consumption of Nakamoto
-  PoW<cite|nakamoto2008bitcoin>. This paper is inspired by the recent paper
-  from Itay, Alexander and Ittay <cite|tsabary2019just> which describes
-  several algorithms with reduced external costs. It's also inspired by the
-  white paper of Alephium project<cite|alephium> which introduces dynamic
-  mining rewards with lockup. We propose two algorithm (linear PoLW and
-  exponential PoLW) which could reduce the energy consumption of Nakamoto
-  PoW.
+  PoW<cite|nakamoto2008bitcoin>. This paper is inspired by the recent and
+  great paper from Itay, Alexander and Ittay <cite|tsabary2019just> which
+  describes several algorithms with reduced external costs. It's also
+  inspired by the white paper of Alephium project <cite|alephium> which
+  introduces dynamic mining rewards with lockup. We propose two algorithms
+  (linear PoLW and exponential PoLW) which could reduce the energy
+  consumption of Nakamoto PoW.
+
+  From Section <math|2> to Section <math|6> we discuss about our linear PoLW.
+  Then generalize it to other PoLW.
 
   <subsubsection|Linear PoLW>
 
@@ -303,24 +308,24 @@
   <\collection>
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-10|<tuple|7.1|3>>
-    <associate|auto-11|<tuple|7.2|4>>
-    <associate|auto-12|<tuple|7.3|4>>
+    <associate|auto-11|<tuple|7.2|3>>
+    <associate|auto-12|<tuple|7.3|3>>
     <associate|auto-13|<tuple|7.4|4>>
-    <associate|auto-14|<tuple|8|?>>
-    <associate|auto-15|<tuple|9|?>>
-    <associate|auto-16|<tuple|10|?>>
-    <associate|auto-17|<tuple|10|?>>
+    <associate|auto-14|<tuple|8|4>>
+    <associate|auto-15|<tuple|9|4>>
+    <associate|auto-16|<tuple|10|4>>
+    <associate|auto-17|<tuple|10|4>>
     <associate|auto-2|<tuple|2|1>>
-    <associate|auto-3|<tuple|1|2>>
-    <associate|auto-4|<tuple|3|2>>
+    <associate|auto-3|<tuple|1|1>>
+    <associate|auto-4|<tuple|3|1>>
     <associate|auto-5|<tuple|4|2>>
     <associate|auto-6|<tuple|4.1|2>>
-    <associate|auto-7|<tuple|5|3>>
-    <associate|auto-8|<tuple|6|3>>
+    <associate|auto-7|<tuple|5|2>>
+    <associate|auto-8|<tuple|6|2>>
     <associate|auto-9|<tuple|7|3>>
-    <associate|bib-alephium|<tuple|3|?>>
-    <associate|bib-nakamoto2008bitcoin|<tuple|1|?>>
-    <associate|bib-tsabary2019just|<tuple|2|?>>
+    <associate|bib-alephium|<tuple|3|4>>
+    <associate|bib-nakamoto2008bitcoin|<tuple|1|4>>
+    <associate|bib-tsabary2019just|<tuple|2|4>>
   </collection>
 </references>
 
@@ -332,67 +337,77 @@
       tsabary2019just
 
       alephium
+
+      tsabary2019just
     </associate>
     <\associate|table>
-      <tuple|normal||<pageref|auto-2>>
+      <tuple|normal||<pageref|auto-3>>
     </associate>
     <\associate|toc>
       <with|par-left|<quote|2tab>|1<space|2spc>Introduction
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1>>
 
-      <with|par-left|<quote|2tab>|2<space|2spc>Mining Strategy
+      <with|par-left|<quote|2tab>|2<space|2spc>Linear PoLW
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-3>>
+      <no-break><pageref|auto-2>>
 
-      <with|par-left|<quote|2tab>|3<space|2spc>Equilibrium Strategy
+      <with|par-left|<quote|2tab>|3<space|2spc>Mining Strategy
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-4>>
 
+      <with|par-left|<quote|2tab>|4<space|2spc>Equilibrium Strategy
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-5>>
+
       <with|par-left|<quote|4tab>|Equilibrium Case.
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-5><vspace|0.15fn>>
+      <no-break><pageref|auto-6><vspace|0.15fn>>
 
-      <with|par-left|<quote|2tab>|4<space|2spc>Security Analysis
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-6>>
-
-      <with|par-left|<quote|2tab>|5<space|2spc>Energy consumption.
+      <with|par-left|<quote|2tab>|5<space|2spc>Security Analysis
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-7>>
 
-      <with|par-left|<quote|2tab>|6<space|2spc>Generalization
+      <with|par-left|<quote|2tab>|6<space|2spc>Energy consumption.
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-8>>
+
+      <with|par-left|<quote|2tab>|7<space|2spc>Generalization & exponential
+      PoLW <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-9>>
 
       <with|par-left|<quote|4tab>|Case <with|mode|<quote|math>|f<around*|(|1-\<alpha\>|)>=e<rsup|\<gamma\><around*|(|1-\<alpha\>|)>>-1
       <around*|(|\<gamma\>\<geqslant\>1|)>>.
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-9><vspace|0.15fn>>
+      <no-break><pageref|auto-10><vspace|0.15fn>>
 
       <with|par-left|<quote|4tab>|Equilibrium.
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-10><vspace|0.15fn>>
+      <no-break><pageref|auto-11><vspace|0.15fn>>
 
       <with|par-left|<quote|4tab>|Security.
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-11><vspace|0.15fn>>
+      <no-break><pageref|auto-12><vspace|0.15fn>>
 
       <with|par-left|<quote|4tab>|Energy consumption.
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-12><vspace|0.15fn>>
+      <no-break><pageref|auto-13><vspace|0.15fn>>
 
-      <with|par-left|<quote|2tab>|7<space|2spc>Parameter Selection
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-13>>
-
-      <with|par-left|<quote|2tab>|8<space|2spc>Implementation considerations.
+      <with|par-left|<quote|2tab>|8<space|2spc>Parameter Selection
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-14>>
 
+      <with|par-left|<quote|2tab>|9<space|2spc>Implementation considerations.
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-15>>
+
+      <with|par-left|<quote|2tab>|10<space|2spc>Discussion.
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-16>>
+
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Bibliography>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-15><vspace|0.5fn>
+      <no-break><pageref|auto-17><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
