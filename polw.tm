@@ -156,7 +156,7 @@
   less than <math|1> coin. Therefore, it costs less energy compared to
   Nakamoto PoW.
 
-  <subsubsection|Generalization & exponential PoLW>
+  <subsubsection|Generalization & Exponential PoLW>
 
   Let's assume now that the weights of work is calculated by
   <math|1+f<around*|(|1-\<alpha\>|)>>. In our previous analysis,
