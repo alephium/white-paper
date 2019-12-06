@@ -17,7 +17,17 @@
   inspired by the white paper of Alephium project <cite|alephium> which
   introduces dynamic mining rewards with lockup. We propose two algorithms
   (linear PoLW and exponential PoLW) which could reduce the energy
-  consumption of Nakamoto PoW.
+  consumption of Nakamoto PoW. In pariticular, exponential PoLW could in
+  theory reduce the energy consumption by an arbitrarily factor.
+
+  The key point is as the <em|IncentivizedInternalExpenses> in
+  <cite|tsabary2019just> to keep high block generation costs by encouraging
+  the miners to spend funds in a way internal to the network. In PoLW, the
+  miners are able to give up part of the coin rewards so as to get a weight
+  (\<gtr\> 1) for the mining work they done. In some sense, the miners do
+  both actual mining by finding better hashes and virtual mining by get a
+  work weight. When the work weight is higher, the actual mining done in the
+  physical world would be less.\ 
 
   From Section <math|2> to Section <math|6> we discuss about our linear PoLW.
   Then generalize it to other PoLW.
@@ -142,7 +152,7 @@
 
   In equilibrium where <math|\<beta\>=<frac|<around*|(|1+\<gamma\>|)><rsup|2>|4\<gamma\>>,\<alpha\>=<frac|1+\<gamma\>|2>>,
   the cost of the attacker is <math|2<sqrt|\<beta\>\<gamma\>>-\<gamma\>=1>.
-  Therefore, we show that our new PoWW algorithm has same security as
+  Therefore, we show that our new PoLW algorithm has same security as
   Nakamoto PoW in terms of new block generation cost.
 
   We ignore the other metrics analysis similar to that of paper
@@ -193,8 +203,10 @@
   many ways to choose such kind of functions. We focus on this following
   simple case.
 
-  <paragraph|Case <math|f<around*|(|1-\<alpha\>|)>=e<rsup|\<gamma\><around*|(|1-\<alpha\>|)>>-1
-  <around*|(|\<gamma\>\<geqslant\>1|)>>.>In this case, we have
+  <paragraph|Exponential PoLW.>Here we take
+  <math|f<around*|(|1-\<alpha\>|)>=e<rsup|\<gamma\><around*|(|1-\<alpha\>|)>>-1
+  <around*|(|\<gamma\>\<geqslant\>1|)>>, i.e. the weight of work becomes
+  <math|e<rsup|\<gamma\><around*|(|1-\<alpha\>|)>>>. In this case, we have
 
   <\eqnarray*>
     <tformat|<table|<row|<cell|max<around*|(|<around*|{|1+f<around*|(|1-\<alpha\><rsub|M>|)>|}>\<alpha\><rsub|M>|)>>|<cell|=>|<cell|max<around*|(|\<alpha\><rsub|M>e<rsup|\<gamma\><around*|(|1-\<alpha\><rsub|M>|)>>|)>>>>>
@@ -273,12 +285,13 @@
   possible solution is to adjust <math|\<gamma\>> when the blockchain
   evolves, so that the weights are lower from the beginning, but getting
   higher eventually. For example, we could adjust <math|\<gamma\>> based on
-  the currently work target.
+  the currently actual work level without weights.
 
   <subsubsection|Implementation considerations.>
 
   The only thing to change is to use weighted work instead of the classic
-  work. Therefore, there is neglagible implementation overhead.
+  work. Therefore, there is neglagible implementation overhead. For Bitcoin,
+  only a softfork is needed.
 
   <subsubsection|Discussion.>
 
@@ -309,7 +322,7 @@
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-10|<tuple|7.1|3>>
     <associate|auto-11|<tuple|7.2|3>>
-    <associate|auto-12|<tuple|7.3|3>>
+    <associate|auto-12|<tuple|7.3|4>>
     <associate|auto-13|<tuple|7.4|4>>
     <associate|auto-14|<tuple|8|4>>
     <associate|auto-15|<tuple|9|4>>
@@ -321,7 +334,7 @@
     <associate|auto-5|<tuple|4|2>>
     <associate|auto-6|<tuple|4.1|2>>
     <associate|auto-7|<tuple|5|2>>
-    <associate|auto-8|<tuple|6|2>>
+    <associate|auto-8|<tuple|6|3>>
     <associate|auto-9|<tuple|7|3>>
     <associate|bib-alephium|<tuple|3|4>>
     <associate|bib-nakamoto2008bitcoin|<tuple|1|4>>
@@ -372,12 +385,11 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-8>>
 
-      <with|par-left|<quote|2tab>|7<space|2spc>Generalization & exponential
+      <with|par-left|<quote|2tab>|7<space|2spc>Generalization & Exponential
       PoLW <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-9>>
 
-      <with|par-left|<quote|4tab>|Case <with|mode|<quote|math>|f<around*|(|1-\<alpha\>|)>=e<rsup|\<gamma\><around*|(|1-\<alpha\>|)>>-1
-      <around*|(|\<gamma\>\<geqslant\>1|)>>.
+      <with|par-left|<quote|4tab>|Exponential PoLW.
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-10><vspace|0.15fn>>
 
