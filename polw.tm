@@ -20,14 +20,14 @@
   consumption of Nakamoto PoW. In pariticular, exponential PoLW could in
   theory reduce the energy consumption by an arbitrarily factor.
 
-  The key point is as the <em|IncentivizedInternalExpenses> in
+  The key point is as the <em|IncentivizedInternalExpenses> algorithm in
   <cite|tsabary2019just> to keep high block generation costs by encouraging
   the miners to spend funds in a way internal to the network. In PoLW, the
   miners are able to give up part of the coin rewards so as to get a weight
   (\<gtr\> 1) for the mining work they done. In some sense, the miners do
   both actual mining by finding better hashes and virtual mining by get a
   work weight. When the work weight is higher, the actual mining done in the
-  physical world would be less.\ 
+  physical world would be less.
 
   From Section <math|2> to Section <math|6> we discuss about our linear PoLW.
   Then generalize it to other PoLW.
@@ -350,6 +350,8 @@
       tsabary2019just
 
       alephium
+
+      tsabary2019just
 
       tsabary2019just
     </associate>
